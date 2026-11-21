@@ -130,7 +130,8 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
 .checks li::before{ content:""; flex:0 0 auto; width:7px; height:7px; background:var(--green); transform:translateY(-2px); }
 .tags{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
 .tags li{ padding:7px 12px; background:var(--white); border:1px solid var(--line); border-radius:var(--r); font-size:.9rem; }
-@media (min-width:900px){ .svc{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:start; } .checks{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:28px; } }
+@media (min-width:900px){ .svc{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:start; } }
+@media (min-width:1100px){ .checks{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:28px; } }
 .cert{ margin-top:28px; display:flex; flex-wrap:wrap; gap:8px 18px; font-size:.92rem; color:var(--soft); }
 .cert b{ color:var(--green); font-weight:600; }
 
@@ -152,7 +153,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
 /* 오시는 길 */
 .visit .grid{ display:grid; gap:36px; }
 .vinfo{ border-top:1px solid var(--green); }
-.vinfo div{ display:grid; grid-template-columns:80px minmax(0,1fr); gap:12px; padding:16px 0; border-bottom:1px solid var(--line); }
+.vinfo div{ display:grid; grid-template-columns:92px minmax(0,1fr); gap:12px; padding:16px 0; border-bottom:1px solid var(--line); }
 .vinfo dt{ font-family:var(--caps); font-size:.84rem; letter-spacing:.12em; color:var(--green); padding-top:3px; }
 .vinfo dd{ font-size:.96rem; }
 .vinfo dd p + p{ margin-top:4px; }
@@ -214,7 +215,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
     <div class="wrap grid">
       <div class="intro">
         <div class="hd">
-          <figure class="owner"><img src="ts-owner.webp" alt="흰 셔츠를 입고 턱에 손을 댄 대표원장 프로필 사진" width="320" height="400" fetchpriority="high" /><figcaption>대표원장 박신해</figcaption></figure>
+          <figure class="owner"><img src="ts-owner.webp" alt="검은 재킷을 입고 옆을 바라보는 대표원장 프로필 사진" width="320" height="400" fetchpriority="high" /><figcaption>대표원장 박신해</figcaption></figure>
           <div>
             <p class="en">WAXING &amp; Y-ZONE THERAPY</p>
             <h1 id="hero-h">왁싱부터 Y존, <span class="nw">페이스, 바디까지</span></h1>
@@ -235,7 +236,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
         </div>
       </div>
       <figure class="photo">
-        <img src="ts-hero.webp" alt="초록 식물 벽에 THE SMOOTH 간판과 자격증이 놓인 매장" width="800" height="1000" fetchpriority="high" />
+        <img src="ts-hero.webp" alt="초록 식물 벽에 THE SMOOTH 간판과 자격증이 놓인 매장" width="736" height="920" fetchpriority="high" />
       </figure>
     </div>
   </section>
@@ -326,7 +327,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
           <li><span>팔 전체</span><span>55,000원</span></li>
           <li><span>다리 하프</span><span>55,000원</span></li>
           <li><span>다리 전체</span><span>99,000원</span></li>
-          <li><span>수술 전 부위 왁싱 케어</span><span>상담</span></li>
+          <li><span>수술 전 부위 왁싱 케어</span><span>변동</span></li>
         </ul>
       </div>
       <div class="panel reveal" id="panel-m" role="tabpanel" aria-labelledby="tab-m">
@@ -356,7 +357,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
           <li><span>팔 전체</span><span>88,000원</span></li>
           <li><span>다리 하프</span><span>99,000원</span></li>
           <li><span>다리 전체</span><span>129,000원</span></li>
-          <li><span>수술 전 부위 왁싱 케어</span><span>상담</span></li>
+          <li><span>수술 전 부위 왁싱 케어</span><span>변동</span></li>
         </ul>
       </div>
       <p class="p-note reveal">기타 부위 상담 후 진행 · Y존 테라피와 페이스 · 바디 관리 가격은 상담 시 안내해 드려요.</p>
@@ -370,8 +371,9 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
         <div>
           <dl class="vinfo reveal">
             <div><dt>HOURS</dt><dd><p>매일 <span class="nw">10:00 - 21:00</span></p><p class="way">운영시간 외 시술환영💗톡톡 문의 부탁드립니다^^</p></dd></div>
-            <div><dt>ADDRESS</dt><dd><p>경기 수원시 팔달구 <span class="nw">중부대로 110</span> <span class="nw">한라시그마팰리스 상가</span> <span class="nw">314호</span></p><p class="way">한라시그마팰리스 상가로 들어오신 후 314호로 방문해 주시면 됩니다. 찾아오시기 어려울 경우 바로준내과를 기준으로 찾아오시면 바로 앞에 위치해 있어 더욱 쉽게 방문하실 수 있습니다.</p></dd></div>
-            <div><dt>PARKING</dt><dd><p>차량 방문 시 지하 1층부터 5층까지 주차가 가능합니다.</p><p class="way">상가용 엘리베이터 이용 시 3층에서 하차 후 바로준내과 방향으로 이동해 주세요. 101동 엘레베이터가 가장 가깝습니다</p><p class="way">오피스텔 엘리베이터 이용 시에는 경비실로 연락 주시면 출입문을 바로 열어드립니다. 연결이 안될 경우 매장으로 전화나 톡톡주세요!</p></dd></div>
+            <div><dt>ADDRESS</dt><dd><p>경기 수원시 팔달구 <span class="nw">중부대로 110</span> <span class="nw">한라시그마팰리스 상가 314호</span></p><p class="way">한라시그마팰리스 상가로 들어오신 후 314호로 방문해 주시면 됩니다. 찾아오시기 어려울 경우 바로준내과를 기준으로 찾아오시면 바로 앞에 위치해 있어 더욱 쉽게 방문하실 수 있습니다.</p></dd></div>
+            <div><dt>PARKING</dt><dd><p>차량 방문 시 지하 1층부터 5층까지 주차가 가능합니다.</p></dd></div>
+            <div><dt>ELEVATOR</dt><dd><p>상가용 엘리베이터 이용 시 3층에서 하차 후 바로준내과 방향으로 이동해 주세요. 101동 엘레베이터가 가장 가깝습니다</p><p class="way">오피스텔 엘리베이터 이용 시에는 경비실로 연락 주시면 출입문을 바로 열어드립니다. 연결이 안될 경우 매장으로 전화나 톡톡주세요!</p></dd></div>
             <div><dt>TEL</dt><dd><a href="tel:01065660062" class="nw">010-6566-0062</a></dd></div>
           </dl>
           <div class="row reveal">
