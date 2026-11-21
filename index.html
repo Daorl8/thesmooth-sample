@@ -86,16 +86,25 @@ a{ color:inherit; }
 .hero .en{ font-family:var(--caps); font-size:.92rem; letter-spacing:.2em; color:var(--green); }
 .hero h1{ margin-top:14px; font-size:clamp(1.6rem, 6.2vw, 2.6rem); font-weight:600; line-height:1.38; letter-spacing:-.01em; }
 .hero .sub{ margin-top:12px; color:var(--soft); }
-.points{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
-.points li{ padding:6px 12px; border:1px solid var(--line); border-radius:var(--r); font-size:.88rem; background:var(--cream); }
+/* 대표원장 사진 + 제목 (다올 요청: 작게 왼쪽) */
+.hd{ display:grid; grid-template-columns:132px minmax(0,1fr); gap:28px; align-items:center; }
+.owner{ margin:0; }
+.owner img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--r); background:var(--cream); }
+.owner figcaption{ margin-top:8px; font-size:.8rem; color:var(--soft); text-align:center; white-space:nowrap; }
+@media (max-width:599.98px){ .hd{ grid-template-columns:minmax(0,1fr); gap:20px; } .owner{ display:flex; align-items:flex-end; gap:12px; } .owner img{ width:84px; } .owner figcaption{ margin:0; text-align:left; } }
+/* 특징 박스: 위 · 아래 줄 가로 길이 같게 (6칸 격자 · 2개 + 3개) */
+.points{ list-style:none; display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:8px; margin-top:24px; max-width:500px; }
+.points li{ grid-column:span 2; display:flex; align-items:center; justify-content:center; text-align:center; min-height:42px; padding:6px 8px; border:1px solid var(--line); border-radius:var(--r); font-size:.88rem; line-height:1.4; background:var(--cream); }
+.points li:nth-child(-n+2){ grid-column:span 3; }
+@media (max-width:439.98px){ .points li:nth-child(-n+2){ grid-column:1 / -1; } .points li{ font-size:.84rem; padding:6px 4px; } }
 .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; max-width:500px; }
 .cta .btn:first-child{ grid-column:1 / -1; }
 .cta .btn:last-child:nth-child(even){ grid-column:1 / -1; }
 @media (max-width:439.98px){ .cta{ grid-template-columns:minmax(0,1fr); } }
-.hero figure{ margin:0; }
-.hero figure img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--r); }
-@media (max-width:899.98px){ .hero figure{ max-width:460px; } }
-@media (min-width:900px){ .hero{ padding:72px 0 96px; } .hero .grid{ grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:64px; } }
+.hero .photo{ margin:0; }
+.hero .photo img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--r); }
+@media (max-width:899.98px){ .hero .photo{ max-width:460px; } }
+@media (min-width:900px){ .hero h1{ font-size:clamp(1.6rem, 2.6vw, 2.4rem); } .hero{ padding:72px 0 96px; } .hero .grid{ grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:64px; } }
 
 /* 공통 */
 .sec{ padding:96px 0; }
@@ -204,9 +213,14 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap grid">
       <div class="intro">
-        <p class="en">WAXING &amp; Y-ZONE THERAPY</p>
-        <h1 id="hero-h">왁싱부터 Y존, <span class="nw">페이스, 바디까지</span></h1>
-        <p class="sub">한 공간에서 관리하는 <span class="nw">컨디션 케어 전문샵입니다.</span></p>
+        <div class="hd">
+          <figure class="owner"><img src="ts-owner.webp" alt="흰 셔츠를 입고 턱에 손을 댄 대표원장 프로필 사진" width="320" height="400" fetchpriority="high" /><figcaption>대표원장 박신해</figcaption></figure>
+          <div>
+            <p class="en">WAXING &amp; Y-ZONE THERAPY</p>
+            <h1 id="hero-h">왁싱부터 Y존, <span class="nw">페이스, 바디까지</span></h1>
+            <p class="sub">한 공간에서 관리하는 <span class="nw">컨디션 케어 전문샵입니다.</span></p>
+          </div>
+        </div>
         <ul class="points">
           <li>100% 예약제 프라이빗 운영</li>
           <li>대표원장 상담 및 직접 시술</li>
@@ -220,7 +234,7 @@ h2{ margin-top:8px; font-size:clamp(1.4rem, 5vw, 1.95rem); font-weight:600; line
           <a class="btn" href="tel:01065660062">전화 <span class="nw">010-6566-0062</span></a>
         </div>
       </div>
-      <figure>
+      <figure class="photo">
         <img src="ts-hero.webp" alt="초록 식물 벽에 THE SMOOTH 간판과 자격증이 놓인 매장" width="800" height="1000" fetchpriority="high" />
       </figure>
     </div>
