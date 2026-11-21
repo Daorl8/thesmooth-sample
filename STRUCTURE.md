@@ -1,4 +1,4 @@
-# STRUCTURE · thesmooth-sample (v0.1.0 · 흰 바탕 + 딥그린 · 모서리 2px · 배포 예정 thesmooth-sample.lgt3232.workers.dev)
+# STRUCTURE · thesmooth-sample (v0.1.3 · 흰 바탕 + 딥그린 · 모서리 2px · 배포 예정 thesmooth-sample.lgt3232.workers.dev)
 
 ```
 thesmooth-sample/
@@ -7,9 +7,11 @@ thesmooth-sample/
 ├─ .assetsignore              img/ · _old/ · 문서 · index_*.html · _deploy 배포 제외
 ├─ ts-marcellus.woff2         영문 워드마크 · 라벨 (Marcellus, 영문만)
 ├─ ts-pretendard.woff2        본문 · 한글 (Pretendard 300–700)
-├─ ts-hero.webp               히어로 (초록 벽 간판 · 자격증, 4:5)
+├─ ts-owner.webp              히어로 대표원장 사진 (320×400 · img/65bjkb.png · 다올 지시로 얼굴 사진 예외)
+├─ ts-hero.webp               히어로 (초록 벽 간판 · 자격증, 736×920 · 4:5)
 ├─ ts-p2 · ts-p3 · ts-p4.webp 1:1 PRIVATE 사진 3장 (샤워실 · 관리실 · 슈가링)
 ├─ favicon.png · og-ts.jpg
+├─ _old/                      이전 버전 백업 (배포 제외)
 ├─ img/                       다올 제공 원본 + _원문.md (배포 제외 · 레포에 올리지 말 것)
 └─ CHANGELOG.md / STRUCTURE.md
 ```
@@ -19,7 +21,7 @@ thesmooth-sample/
 
 ## 버튼 · 링크
 - 네이버 톡톡 `https://talk.naver.com/wd2d17w`(메인): 헤더(900 이상) · 히어로 · 오시는 길 · 하단 바
-- 네이버 예약(추정) `https://naver.me/FjmBe57p`: 히어로 · 하단 바 — 목적지 사장님 확인 필요
+- 네이버 예약 `https://naver.me/FjmBe57p`: 히어로 · 하단 바 (다올이 링크 정상 확인 · v0.1.2)
 - 전화 `tel:01065660062`: 히어로 · 오시는 길 · 푸터 · 하단 바
 - 카카오톡 채널 `https://pf.kakao.com/_bpTRX`: 오시는 길
 - 네이버 지도 `map.naver.com/p/entry/place/2044481788` · 인스타 · 블로그 · 플레이스(푸터)
